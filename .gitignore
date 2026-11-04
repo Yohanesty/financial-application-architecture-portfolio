@@ -1,0 +1,14 @@
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+*.tar
+*.bin
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
