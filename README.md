@@ -8,7 +8,7 @@
 
 업무·고객사별로 분산된 Application은 초기에는 장애 격리와 개별 대응이 쉽지만, 업무가 늘어날수록 동일 기능과 운영 절차가 반복되고 변경 영향 분석이 어려워집니다.
 
-이 포트폴리오에서는 서로 다른 성격의 두 통합 사례를 다룹니다.
+이 포트폴리오에서는 서로 다른 성격의 Application 통합·고도화 사례를 다룹니다.
 
 - **사용자/채널 Application 통합:** 52개 진입점을 4개 업무 영역으로 재구성
 - **전자문서 중계 수신 통합:** 업무별 분산 수신 구조를 공통 수신 Application으로 표준화
@@ -75,7 +75,7 @@ Git 기반 변경관리와 함께 Build/Test Gate를 두고 실행 JAR의 SHA-25
 
 ### Case A · 52 Entry Points → 4 Business Areas
 
-중복된 고객사·서비스 진입점을 기능 책임 기준으로 4개 영역으로 정리하고, 단일 소스/배포 구조와 환경별 설정 분리를 적용했습니다.
+고객사·업무별로 분산된 52개 처리 진입점을 기능 책임 기준 4개 영역으로 재설계하고 있으며, 단일 소스/배포 구조와 환경별 설정 분리를 적용하는 통합 개발을 진행 중입니다.
 
 핵심 판단은 “업무별 WAR를 늘리면 배포·스크립트·Alias·DB 코드 관리가 다시 증가한다”는 점이었습니다. 따라서 공통 WAR와 Profile 기반 설정을 유지하면서 Runtime을 분리해 업무별 선택적 배포·재기동이 가능하도록 구성했습니다.
 
@@ -100,6 +100,12 @@ Binary 전문, 고정길이 Header, Archive, XML Metadata, 관계형 DB 원장�
 
 상세: [Bulk Document Export Portfolio](https://github.com/Yohanesty/bulk-document-export-portfolio)
 
+## Current Status
+
+- `52 → 4` Application 통합은 2026년 진행 중이며 전체 운영 전환 완료 성과로 표현하지 않습니다.
+- Bulk Export의 전체 다운로드는 공개 문서에서 설계 방향과 검증 항목을 설명하며, 실제 운영 구현 범위와 구분합니다.
+- 공개 Reference Design은 실제 운영 소스와 동일 구현이라는 의미가 아닙니다.
+
 ## 5. Validation
 
 설계 변경은 코드 컴파일만으로 완료 처리하지 않고 다음 계층을 구분해 검증합니다.
@@ -121,7 +127,7 @@ Client
 
 ## 6. Result
 
-- 52개 진입점을 4개 업무 영역으로 재구성해 중복 Application 관리 포인트를 축소
+- 52개 진입점을 4개 기능 경계로 재설계하고 통합 개발 진행
 - 업무별로 분산된 수신 흐름을 공통 Integration Pipeline으로 표준화
 - 외부 Interface를 유지하면서 내부 Architecture를 교체하는 전환 방식 적용
 - 설정과 소스 로직을 분리해 신규 업무 추가 시 중복 구현을 최소화
