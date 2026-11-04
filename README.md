@@ -91,6 +91,15 @@ Binary 전문, 고정길이 Header, Archive, XML Metadata, 관계형 DB 원장�
 
 상세: [Receiver Modernization](docs/receiver-modernization.md)
 
+
+### Case C · Bulk Document Export / Delivery
+
+대량 문서 조회·출고 API에서는 최대 10,000건의 CSV/Excel/JSON 요청 등록, Request Key 기반 처리 추적, 분할 Archive 생성, 상태/파일개수/다운로드 API를 하나의 흐름으로 설계했습니다.
+
+초기에는 등록 자체를 별도 비동기 Job으로 분리하는 방안을 검토했지만, 품질 환경에서 10,000건 등록이 약 38초에 정상 응답되는 것을 확인한 뒤 **측정 결과를 기준으로 즉시 구조를 복잡하게 만들지 않고 기존 동기 등록 구조를 유지**했습니다. 대신 이후 처리 단계는 작업 상태와 결과 파일을 분리해 장시간 작업을 추적할 수 있도록 했습니다.
+
+상세: [Bulk Document Export & Delivery](docs/bulk-document-export.md)
+
 ## 5. Validation
 
 설계 변경은 코드 컴파일만으로 완료 처리하지 않고 다음 계층을 구분해 검증합니다.
