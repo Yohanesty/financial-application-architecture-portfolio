@@ -98,7 +98,7 @@ Binary 전문, 고정길이 Header, Archive, XML Metadata, 관계형 DB 원장�
 
 초기에는 등록 자체를 별도 비동기 Job으로 분리하는 방안을 검토했지만, 품질 환경에서 10,000건 등록이 약 38초에 정상 응답되는 것을 확인한 뒤 **측정 결과를 기준으로 즉시 구조를 복잡하게 만들지 않고 기존 동기 등록 구조를 유지**했습니다. 대신 이후 처리 단계는 작업 상태와 결과 파일을 분리해 장시간 작업을 추적할 수 있도록 했습니다.
 
-상세: [Bulk Document Export & Delivery](docs/bulk-document-export.md)
+상세: [Bulk Document Export Portfolio](https://github.com/Yohanesty/bulk-document-export-portfolio)
 
 ## 5. Validation
 
@@ -133,6 +133,7 @@ Client
 
 ## 7. Related Portfolio
 
+- [Bulk Document Export Portfolio](https://github.com/Yohanesty/bulk-document-export-portfolio) — 최대 10,000건 등록, Request 추적, 장시간 Job, 분할 Archive 및 다운로드 Architecture
 - [Financial E-Document Gateway Portfolio](https://github.com/Yohanesty/financial-edoc-gateway-portfolio) — Legacy native/socket 기반 전자문서 수신 구조를 Java/Netty 기반으로 현대화한 별도 사례
 - [Spring Security MFA Portfolio](https://github.com/Yohanesty/spring-security-mfa-portfolio) — Legacy Spring Web 인증 구조에 TOTP MFA를 확장한 보안 개선 사례
 - [Zabbix Monitoring Portfolio](https://github.com/Yohanesty/zabbix-monitoring-portfolio) — 서버·Application 통합 모니터링 및 운영 자동화 사례
@@ -149,6 +150,7 @@ Client
     ├── architecture-one-pager.md
     ├── application-architecture-integration.md
     ├── receiver-modernization.md
+    ├── bulk-document-export.md
     └── production-validation.md
 ```
 
