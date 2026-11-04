@@ -1,6 +1,6 @@
 # Application Architecture Integration · One Pager
 
-> 면접/PT에서 1장으로 설명하기 위한 Architecture 요약입니다.
+> Application 통합 사례의 핵심 설계와 의사결정을 한 장으로 요약한 Architecture 문서입니다.
 
 ## AS-IS → TO-BE
 
