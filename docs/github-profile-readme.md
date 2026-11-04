@@ -22,6 +22,11 @@ Legacy native/socket 기반 전자문서 수신 구조를 Java/Netty 기반으�
 - 오류 이력 및 재처리
 - 비동기 Downstream 처리
 
+## Backend & Integration
+
+### [Bulk Document Export Portfolio](https://github.com/Yohanesty/bulk-document-export-portfolio)
+최대 10,000건 등록, REQUEST_KEY 추적, 장시간 처리, 분할 Archive 및 다운로드 API를 설계한 Bulk Processing 사례입니다.
+
 ## Backend & Security
 
 ### [Spring Security MFA Portfolio](https://github.com/Yohanesty/spring-security-mfa-portfolio)
@@ -32,7 +37,7 @@ Legacy Spring Web 인증 흐름에 TOTP 기반 MFA를 확장한 인증 고도화
 - 폐쇄망 배포와 운영 절차 고려
 - 인증 실패/예외 처리 분리
 
-### [JWT / Redis Image Viewer Portfolio](https://github.com/Yohanesty/jwt-redis-image-viewer-portfolio-)
+### [JWT / Redis Image Viewer Portfolio](https://github.com/Yohanesty/jwt-redis-image-viewer-portfolio)
 JWT와 Redis를 활용해 외부 이미지 조회 세션과 접근 범위를 제어한 Backend Integration 사례입니다.
 
 ## Operations & Observability
