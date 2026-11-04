@@ -38,7 +38,7 @@ Legacy Spring Web 인증 흐름에 TOTP 기반 MFA를 확장한 인증 고도화
 - 인증 실패/예외 처리 분리
 
 ### [JWT / Redis Image Viewer Portfolio](https://github.com/Yohanesty/jwt-redis-image-viewer-portfolio)
-JWT와 Redis를 활용해 외부 이미지 조회 세션과 접근 범위를 제어한 Backend Integration 사례입니다.
+JWT·Redis 기반 외부 이미지 목록 조회·Streaming Viewer 연계와 접근범위·세션 관리 경험을 일반화한 Backend Integration 사례입니다.
 
 ## Operations & Observability
 
@@ -50,11 +50,6 @@ JWT와 Redis를 활용해 외부 이미지 조회 세션과 접근 범위를 제
 - Template / Macro / LLD 표준화
 - 조건부 Auto-Recovery
 - 운영 검증 Checklist
-
-## Earlier Development
-
-### [Android Development Portfolio](https://github.com/Yohanesty/android-development-portfolio)
-Android 기반 문서관리 Prototype과 서버 API 연계 경험을 일반화해 정리한 초기 개발 Portfolio입니다.
 
 ## Engineering Principles
 
